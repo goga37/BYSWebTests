@@ -1,5 +1,4 @@
 import allure
-
 from core.base_test import browser
 from pages.base_page import BasePage
 from pages.login_page import LoginPageHelper
