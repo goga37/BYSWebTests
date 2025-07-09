@@ -1,5 +1,5 @@
 import allure
-from pages.base_page import BasePage
+from pages.base_page import BasepageHelper
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
@@ -20,7 +20,7 @@ class HelpPageLocators():
     ADVERTISING_CABINET = (By.XPATH, '//a[contains(@href, "reklamnyi-kabinet")]')
 
 
-class HelpPageHelper(BasePage):
+class HelpPageHelper(BasepageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()

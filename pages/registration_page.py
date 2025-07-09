@@ -1,5 +1,5 @@
 import allure
-from pages.base_page import BasePage
+from pages.base_page import BasepageHelper
 from selenium.webdriver.common.by import By
 import random
 
@@ -13,14 +13,12 @@ class RegistrationPageLocators:
     SELECT_CODE = (By.CLASS_NAME, "country-select_code")
 
 
-class RegistrationPageHelpe(BasePage):
+class RegistrationPageHelpe(BasepageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()
 
     def check_page(self):
-        with allure.step("Проверяем корректность загрузки страницы"):
-            self.attach_screenshot()
         self.find_element(RegistrationPageLocators.PHONE_NUMBER)
         self.find_element(RegistrationPageLocators.COUNTRY_LIST)
         self.find_element(RegistrationPageLocators.NEXT_BUTTON)

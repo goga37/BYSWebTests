@@ -1,5 +1,5 @@
 import allure
-from pages.base_page import BasePage
+from pages.base_page import BasepageHelper
 from selenium.webdriver.common.by import By
 
 class RecoveryPageLocators():
@@ -9,7 +9,7 @@ class RecoveryPageLocators():
     SUPPORT_BUTON = (By.XPATH, '//*[@data-l="t,support"]')
 
 
-class RecoveryPageHelpe(BasePage):
+class RecoveryPageHelpe(BasepageHelper):
     def __init__(self, driver):
         self.driver = driver
         self.check_page()
